@@ -11,9 +11,22 @@ for i := 0; i < 20; i++ {
 }
 ```
 
+# Install
+
+```
+go get github.com/johan-lejdung/batch-backoff
+```
+
+# Usage
+
+Import the package
+```
+import bboff github.com/johan-lejdung/batch-backoff
+```
+
 Create a new instance of the struct with:
 ```
-backoff := NewExponentialBackoff(BackoffIntervals{
+backoff := bboff.NewExponentialBackoff(bboff.BackoffIntervals{
     StartInterval: 10 * time.Minute,
     Multiplier:    2,
     MaxInterval:   2 * time.Minute,
