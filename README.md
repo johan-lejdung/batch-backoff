@@ -1,3 +1,7 @@
+[![CircleCI](https://circleci.com/gh/johan-lejdung/batch-backoff.svg?style=svg)](https://circleci.com/gh/johan-lejdung/batch-backoff)
+
+[![codecov](https://codecov.io/gh/johan-lejdung/batch-backoff/branch/master/graph/badge.svg)](https://codecov.io/gh/johan-lejdung/batch-backoff)
+
 # batch-backoff
 Provides exponential backoff for batch processes
 
