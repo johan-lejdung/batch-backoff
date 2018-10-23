@@ -10,7 +10,7 @@ Useful when you want exponential backoff when running async batch processes. eg.
 ```
 for i := 0; i < 20; i++ {
     doProcessCall()
-
+    //... that results into a call to where backoff time is larger than the time to run the loop
     Backoff()
 }
 ```
