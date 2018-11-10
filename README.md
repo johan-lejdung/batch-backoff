@@ -47,10 +47,10 @@ Such as:
 ```
 for i := 0; i < 20; i++ {
     canProceed, batch := backoff.CanProceed()
-	if !canProceed {
-		// handle case
+    if !canProceed {
+        // handle case
         continue
-	}
+    }
     err := doProcessCall()
     if err != nil {
         backoff.Backoff(batch)
