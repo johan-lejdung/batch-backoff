@@ -10,7 +10,6 @@ Useful when you want exponential backoff when running async batch processes. eg.
 ```
 for i := 0; i < 20; i++ {
     doProcessCall()
-    //... that results into a call to where backoff time is larger than the time to run the loop
     Backoff()
 }
 ```
@@ -43,3 +42,18 @@ You will get back `(bool, BackoffBatch)`, where the bool indicates if you can pr
 
 
 The batch is used when calling `Backoff(batch BackoffBatch)`. If the call made after `CanProceed()` fails you just need to provice the `BackoffBatch` to the call of `Backoff` and the increments will handle it self.
+
+Such as:
+```
+for i := 0; i < 20; i++ {
+    canProceed, batch := backoff.CanProceed()
+	if !canProceed {
+		// handle case
+        continue
+	}
+    err := doProcessCall()
+    if err != nil {
+        backoff.Backoff(batch)
+    }
+}
+```
