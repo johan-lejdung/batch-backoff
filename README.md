@@ -25,7 +25,7 @@ go get github.com/johan-lejdung/batch-backoff
 
 Import the package
 ```
-import bboff github.com/johan-lejdung/batch-backoff
+import github.com/johan-lejdung/batch-backoff
 ```
 
 Create a new instance of the struct with:
