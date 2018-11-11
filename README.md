@@ -14,6 +14,8 @@ for i := 0; i < 20; i++ {
 }
 ```
 
+I made this to let a group of async processes share a single backoff.
+
 # Install
 
 ```
